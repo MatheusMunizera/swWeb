@@ -1,0 +1,54 @@
+@font-face {
+    font-family: swFont;
+    src: url("../assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf");
+}
+
+html{
+    background-color:#151515 ;
+}
+
+h1,h2,h3{margin: 0; padding: 0;}
+a{text-decoration: none;}
+
+
+.header{
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.menu{
+    position: absolute;
+    margin-left: 1vw;
+    left: inherit;
+    width:2vh;
+}
+.user{
+
+    position: absolute;
+    right: inherit;
+    margin-right: 1vw !important;
+    width:1.5vh;
+    
+}
+.header-title{
+    color: white;
+    font-size: 3vh;
+    font-family: swFont;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    height: max-content;
+  
+    
+}
+
+.header-title:hover{
+    color: #ffc500;
+}
