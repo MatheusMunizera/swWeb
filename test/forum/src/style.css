@@ -8,6 +8,11 @@
     src: url("../assets/fonts/Titles\ -\ DIN\ Next\ LT\ Pro\ Medium.ttf");
 }
 
+@font-face{
+    font-family: text;
+    src: url("../assets/fonts/Text\ -\ DIN\ Next\ LT\ Arabic\ Regular.ttf") ;
+}
+
 html{
     background-color:#151515 ;
 }
@@ -75,31 +80,6 @@ a{text-decoration: none;}
     height: 2vw;
 }
 
-.search-btn{
-    color: white;
-    background: #999999;
-    justify-content: center;
-    align-items: center;
-    float: right;
-    font-size: 25px;
-    border: none;
-    border-radius: 20px;
-    width: 8vw;
-    height: 2vw;
-    font-family: title;
-}
-.search-btn img{
-    width: 1.5vw;
-}
-.search-btn h2{
-   
-text-align: center;
-align-items: center;
-padding: 0;
-margin: 0;
-
-        
-}
 .search-txt{
     background: none;
     padding-left: 5vh;
@@ -114,5 +94,72 @@ margin: 0;
     border-bottom-width: thin;
     border-bottom-color: #ffc500;
     position: absolute;
+    font-family: text;
 }
 
+.search-btn{
+    color: white;
+    background: #999999;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    font-size: 25px;
+    border: none;
+    border-radius: 20px;
+    width: 8vw;
+    height: 2vw;
+    font-family: title;
+    padding-top: 10px;
+}
+.search-btn img{
+    width: 1.5vw;
+
+}
+
+/* MENU */
+.menu-bar{
+
+position: absolute;
+
+background-color: transparent;
+
+top: 8vw;
+right: 0;
+left: 0;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+
+border-bottom: 1px solid #707070;
+border-top: 1px solid #707070;
+}
+
+#menu ul {
+    padding:0px;
+    margin:0px;
+    background-color:transparent;
+    border-left: 1px solid #707070;
+    list-style:none;
+}
+
+#menu ul li { display: inline; }
+
+#menu ul li a {
+    padding: 2px 10px;
+    display: inline-block;
+
+    /* visual do link */
+    background-color:transparent;
+    color: #999999;
+    text-decoration: none;
+    font-family: text;
+    font-size: large;
+    border-right: 1px solid #707070;
+}
+#menu ul li a:hover {
+    color: white;
+}
+
+/* #menu ul li a:visited{
+    color: white;
+} */
