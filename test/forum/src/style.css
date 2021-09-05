@@ -3,6 +3,11 @@
     src: url("../assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf");
 }
 
+@font-face{
+    font-family: title;
+    src: url("../assets/fonts/Titles\ -\ DIN\ Next\ LT\ Pro\ Medium.ttf");
+}
+
 html{
     background-color:#151515 ;
 }
@@ -10,6 +15,7 @@ html{
 h1,h2,h3{margin: 0; padding: 0;}
 a{text-decoration: none;}
 
+/* HEADER STYLE*/
 
 .header{
     background-color: black;
@@ -20,14 +26,16 @@ a{text-decoration: none;}
     display: inline-flex;
     justify-content: center;
     align-items: center;
-   
+    z-index: 9;
 }
+
 .menu{
     position: absolute;
     margin-left: 1vw;
     left: inherit;
     width:2vh;
 }
+
 .user{
 
     position: absolute;
@@ -36,6 +44,7 @@ a{text-decoration: none;}
     width:1.5vh;
     
 }
+
 .header-title{
     color: white;
     font-size: 3vh;
@@ -51,4 +60,59 @@ a{text-decoration: none;}
 
 .header-title:hover{
     color: #ffc500;
+} 
+
+/* SEARCH STYLE */
+.searchbox{
+    position: absolute;
+    top: 3vw;
+    left: 7vh;
+    padding: 10px;
+    border-radius: 50px;
+    background: #434343;
+    width: fit-content;
+    width: 90vw;
+    height: 2vw;
 }
+
+.search-btn{
+    color: white;
+    background: #999999;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    font-size: 25px;
+    border: none;
+    border-radius: 20px;
+    width: 8vw;
+    height: 2vw;
+    font-family: title;
+}
+.search-btn img{
+    width: 1.5vw;
+}
+.search-btn h2{
+   
+text-align: center;
+align-items: center;
+padding: 0;
+margin: 0;
+
+        
+}
+.search-txt{
+    background: none;
+    padding-left: 5vh;
+    font-size: 2.5vh;
+    color: #999999;
+    width: 68vw;
+    outline: none;
+    height: 2vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: thin;
+    border-bottom-color: #ffc500;
+    position: absolute;
+}
+
