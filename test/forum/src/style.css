@@ -174,8 +174,140 @@ color: white;
 font-family: title;
 border-bottom: 1px solid #707070;
 border-top: 1px solid #707070;
-
 }
+
+.forum-posts{
+position: absolute;
+background-color: transparent;
+
+display: inline-flex;
+justify-content: left;
+align-items: center; 
+
+/* color: white; */
+/* font-family: title; */
+/* border-bottom: 1px solid #707070;
+border-top: 1px solid #707070; */
+}
+
+.forum-posts figure img{
+    margin: 0;
+    position: absolute;
+   
+}
+
+.post1{
+position: absolute;
+background-color: transparent;
+display: inline-flex;
+justify-content: left;
+align-items: center; 
+width:85vw;
+top: 14vw;
+right: 16vh;
+left: 16vh;
+}
+
+.post2{
+    position: absolute;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center; 
+    width:85vw;
+    top: 18vw;
+    right: 16vh;
+    left: 16vh; 
+}
+
+.post3{
+    position: absolute;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center; 
+    width:85vw;
+    top: 22vw;
+    right: 16vh;
+    left: 16vh; 
+}
+
+.post4{
+    position: absolute;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center; 
+    width:85vw;
+    top: 26vw;
+    right: 16vh;
+    left: 16vh; 
+}
+
+.post5{
+    position: absolute;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center; 
+    width:85vw;
+    top: 30vw;
+    right: 16vh;
+    left: 16vh; 
+}
+
+.post6{
+    position: absolute;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center; 
+    width:85vw;
+    top: 34vw;
+    right: 16vh;
+    left: 16vh; 
+}
+#chat{
+    padding-left: 2vw;
+    width: 3vh;
+}
+
+.forum-posts h2{
+    color: white;
+    position: absolute;
+    font-family: title;
+    font-size: 1.8vh;
+    cursor: pointer;
+}
+#post-title{
+    left: 7vw;
+}
+
+.forum-posts p{
+    color: white;
+    position: relative;
+    left: 3.5vw;
+    padding: 0;
+    margin: 0;
+    font-family: text;
+    font-size: 1.5vh;
+    top: 20px;
+}
+
+
+#username{
+    right: 10vw;
+    top:20px;
+}
+#profile{
+    right: 7vw;
+    width: 3.5vh;
+    top: 10px;
+}
+
+
+
+
 /* #menu ul li a:visited{
     color: white;
 }*/
