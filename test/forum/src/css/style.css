@@ -1,16 +1,17 @@
  @font-face { /* swFont */
     font-family: swFont;
-    src: url("../assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf");
+    src: url("../../assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf");
+    
 }
 
 @font-face{ /* tile */
     font-family: title;
-    src: url("../assets/fonts/Titles\ -\ DIN\ Next\ LT\ Pro\ Medium.ttf");
+    src: url("../../assets/fonts/Titles\ -\ DIN\ Next\ LT\ Pro\ Medium.ttf");
 }
 
 @font-face{ /* text */
     font-family: text;
-    src: url("../assets/fonts/Text\ -\ DIN\ Next\ LT\ Arabic\ Regular.ttf") ;
+    src: url("../../assets/fonts/Text\ -\ DIN\ Next\ LT\ Arabic\ Regular.ttf") ;
 }
 
 
@@ -26,8 +27,7 @@ body{
 .swFont{
     color: white;
     font-family: swFont;
-  
-   
+
 }
 
 #home:hover{
@@ -35,15 +35,8 @@ body{
 } 
 
 
-.searchbox{
-    
-    border: none;
-    border-bottom: #ffc500 1px solid;
-    border-radius: 50px;
-    background: #434343;
-    font-family: text;
-   
-}
+
+
 
 .form-control{
     display: inline;
