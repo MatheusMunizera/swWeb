@@ -23,7 +23,9 @@ body{
 
 /* HEADER STYLE*/
 
-
+a{
+    text-decoration: none;
+}
 .swFont{
     color: white;
     font-family: swFont;
@@ -83,7 +85,7 @@ body{
     color: white ;
     border-color: #ffc500 ;
     background-color: #434343;
-    
+    max-width: fit-content;
 }
 
 .dropdown-item:hover{
@@ -113,19 +115,3 @@ body{
     border-top: 1px solid #ffc500;
 }
 
-.post-title{
-    color: #ffc500;
-    font-size:x-large;
-}
-
-.post-date{
-    color: #707070;
-    font-size: small;
-}
-
-.bg-clear-grey{
-    background-color: #707070;
-    color: white;
-    border-radius: 5%;
-    text-align: justify;
-}

@@ -8,6 +8,7 @@
     <!-- Meu CSS  -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/navbar.css">
 
     <!-- Bootstrap JS  -->
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -30,18 +31,21 @@
 <body>
 
     <!-- NAVBAR -->
-    <?php require "components/navbar.php"?>
+    <?php require "components/navbar.php" ?>
 
     <header class="jumbotron">
         <div class="container-fluid">
             <div class="row d-block ">
 
                 <!-- SEARCHBOX -->
-                <div class=" collapse   text-center" id="search">
+
+                <div class=" collapse d-md-none text-center" id="search">
                     <?php include  'components/searchbox.php' ?>
                 </div>
 
-
+                <div class="text-center d-none d-md-block" >
+                 <?php include  'components/searchbox.php' ?>
+                </div>
 
                 <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">FORUM</h1>
             </div>
@@ -50,10 +54,9 @@
 
     <main role="main">
 
-        <section class="row">
+        <section class="row d-lg-none" >
             <div class="btn-group col-4">
-                <button type="button" class="btn topic-selected p-0 m-0 bg-transparent dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="btn topic-selected p-0 m-0 bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     GERAL
                 </button>
 
@@ -67,22 +70,42 @@
                     <li><a class="dropdown-item" href="#">Series</a></li>
                 </ul>
             </div>
-            <div class="col-2 offset-5">
-                <button type="button" class="btn btn-outline-sw  " data-bs-toggle="modal"
-                    data-bs-target="#createPostModal">
+            <div class="col-2 offset-5 text-end">
+                <button type="button" class="btn btn-outline-sw  " data-bs-toggle="modal" data-bs-target="#createPostModal">
                     <i class="bi bi-plus-lg "></i>
                 </button>
             </div>
         </section>
 
+
+        <section class="row d-none d-lg-block">
+        <?php require "components/typesbar.php" ?>
+
+        <div class="px-5 mx-5 my-3 ">
+                <button type="button" class="btn btn-outline-sw swTitle " data-bs-toggle="modal" data-bs-target="#createPostModal">
+                    CRIAR NOVA DISCUSSÃO
+                </button>
+            </div>
+        </section>
+
         <!-- POSTS -->
-        <?php require 'components/posts.php'?>
+            <section class="my-3"  href="posts.php">
+           <a href="posts.php">
+           <?php require 'components/previewposts.php' ?>
+           
+            <?php require 'components/previewposts.php' ?>
+            <?php require 'components/previewposts.php' ?>
+            <?php require 'components/previewposts.php' ?>
+            </a>
+            </section>
+        
+
+       
 
 
 
         <!-- Modal Post -->
-        <div class="modal fade " id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel"
-            aria-hidden="true">
+        <div class="modal fade " id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -91,27 +114,14 @@
                     </div>
                     <div class="modal-body">
 
-                        <?php 
-                            echo ($_SERVER['REQUEST_METHOD']);
-                            echo ($title);
-                            echo ($_POST['title']);
-                        
-                            if($_SERVER['REQUEST_METHOD'] == 'POST'){
-                                $title = $_POST['title'];
 
-                                if($title == ""){
-                                    $erro_title = 'Insira um titulo válido';
-                                }
-                        }
-                        ?>
 
 
                         <form action="index.php" method="post">
                             <div class="form-group">
                                 <label for="title" class="swTitle" style="color: #ffc500;">Titulo:</label>
-                                <input id="title" name="title" type="text" class="form-control"
-                                    placeholder="Insira o titulo do post"  >
-                                <div class="invalid-feedback"> <?php echo $erro_title ?></div>
+                                <input id="title" name="title" type="text" class="form-control" placeholder="Insira o titulo do post">
+                                <div class="invalid-feedback"> </div>
                             </div>
 
 
@@ -130,14 +140,12 @@
 
                             <div class="form-group">
                                 <label for="subject" class="swTitle" style="color: #ffc500;">Assunto:</label>
-                                <input id="subject" name="subject" type="text" class="form-control "
-                                    placeholder="Insira um assunto ao post" required>
+                                <input id="subject" name="subject" type="text" class="form-control " placeholder="Insira um assunto ao post" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="text" class="swTitle" style="color: #ffc500;">Descrição:</label>
-                                <textarea id="text" name="text" type="text" class="form-control" rows="8"
-                                    placeholder="Nos diga o que pensa..." required></textarea>
+                                <textarea id="text" name="text" type="text" class="form-control" rows="8" placeholder="Nos diga o que pensa..." required></textarea>
                             </div>
 
                             <div class="modal-footer">
