@@ -32,7 +32,6 @@
             <div class="row d-block ">
 
                 <!-- SEARCHBOX -->
-
                 <div class=" collapse d-md-none text-center" id="search">
                     <?php include  'components/searchbox.php' ?>
                 </div>
@@ -48,34 +47,12 @@
 
     <main role="main">
 
- 
-
     <div class="all-posts">
     <?php include  'components/article-post.php' ?>
     <?php include  'components/reverse-article-post.php' ?>
     </div>
-
-   
-
-    
-    
-   
-
         
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <!-- Bootstrap JS  -->
