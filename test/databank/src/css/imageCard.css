@@ -1,0 +1,38 @@
+.container
+{    
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 70px;
+    margin: 25px;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+}
+.container .left_Side
+{
+    border: 2px gray;
+    position: relative;
+    background: rgb(41, 38, 38);
+}
+.img-flex{
+    width: 100%;
+    height: 100%;
+}
+.card-body{
+    padding: .2rem 1rem;
+    color: #fff;
+    margin: 0%;
+    text-align: left;
+}
+
+.card-row{
+    width: 100%;
+    margin: 20 auto;
+}
+
+.card-col{
+    width: 100px;
+    display: inline-block;
+    align-items: center;
+}
