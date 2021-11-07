@@ -1,0 +1,19 @@
+.searchbox{
+    
+    border: none;
+    border-bottom: #ffc500 1px solid;
+    border-radius: 50px;
+    background: #434343;
+    font-family: text;
+   
+}
+
+.btn-search{
+    color: #ffc500;
+}
+
+
+.form-control{
+    display: inline;
+    width:100%;
+}
