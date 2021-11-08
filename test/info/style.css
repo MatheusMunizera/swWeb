@@ -143,7 +143,6 @@ body{
     background: #151515;
 }
 .card{
-    padding: 8%;
     background: #151515;
 }
 .card-title{
@@ -160,3 +159,86 @@ body{
     color: #FFFFFF;
 }
 
+/* Nav-Bar */
+
+.icon-yellow{
+    font-size: 30px;
+    color: #ffc500;
+    text-decoration: none;
+}
+
+.icon-grey{
+    font-size: 30px;
+    color: #999999;
+    text-decoration: none;
+    border-color: transparent;
+    border: none;
+}
+
+.bar{
+    border: #999999 1px solid;
+
+
+}
+
+.bar>li{
+    border: #999999 1px solid;
+    border-top: none;
+    border-bottom: none;
+    color: #999999;
+
+}
+
+.bar>li:hover{
+    color:white;
+}
+
+.icon-yellow:hover{
+    color:#999999;
+}
+
+.icon-grey:hover{
+    color:#ffc500;
+}
+
+/* Header */
+
+.searchbox{
+    
+    border: none;
+    border-bottom: #ffc500 1px solid;
+    border-radius: 50px;
+    background: #434343;
+    font-family: text;
+   
+}
+
+.btn-search{
+    color: #ffc500;
+}
+
+/* Media query */
+
+@media screen and (min-width:768px) {
+    .bg-desk{
+        background-color: #707070;
+    }
+    .img-desk{
+        width: 1020px;
+        height: 360px;
+        border: none !important;
+        
+    }
+}
+
+a:active {color: #ffc500;}
+
+.a{
+   color: #FFFFFF;
+   font: title; 
+}
+.seg:hover{
+    color: black !important;
+    background-color: #ffc500 !important;
+    border: 1px black solid !important;
+}
