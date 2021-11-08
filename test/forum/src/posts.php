@@ -48,33 +48,13 @@
 
     <main role="main">
 
- 
 
     <div class="all-posts">
     <?php include  'components/article-post.php' ?>
     <?php include  'components/reverse-article-post.php' ?>
     </div>
 
-   
-
-    
-    
-   
-
-        
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
