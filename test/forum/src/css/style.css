@@ -38,6 +38,17 @@ a{
 
 
 
+
+
+.form-control{
+    display: inline;
+    width:100%;
+}
+.navbar-toggler{
+    border-color: transparent;
+}
+
+
 .dropdown-menu{
     background-color: #434343;
 }
@@ -52,6 +63,7 @@ a{
    color: #707070;
 
 }
+
 
 .topic-selected{
     font-family: text;

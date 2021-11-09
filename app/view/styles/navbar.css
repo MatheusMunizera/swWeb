@@ -1,0 +1,45 @@
+.icon-yellow{
+    font-size: 30px;
+    color: #ffc500;
+    text-decoration: none;
+}
+
+.icon-grey{
+    font-size: 30px;
+    color: #999999;
+    text-decoration: none;
+    border-color: transparent;
+    border: none;
+}
+
+.bar{
+    border: #999999 1px solid;
+
+
+}
+
+.bar>li{
+    border: #999999 1px solid;
+    border-top: none;
+    border-bottom: none;
+    color: #999999;
+
+}
+
+.bar>li:hover{
+    color:white;
+}
+
+.icon-yellow:hover{
+    color:#999999;
+}
+
+.icon-grey:hover{
+    color:#ffc500;
+}
+
+.navbar-toggler{
+    border-color: transparent;
+}
+
+
