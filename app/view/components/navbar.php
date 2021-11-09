@@ -22,7 +22,7 @@
 
             <div class="col">
                 <a href="https://discord.gg/hrFKyrrDRH" class="icon-grey">
-                <i class="bi bi-discord p-0 d-none d-md-flex"></i>
+                    <i class="bi bi-discord p-0 d-none d-md-flex"></i>
                 </a>
             </div>
 
@@ -30,46 +30,46 @@
 
         </div>
 
-        <a href="index.php" class="navbar-brand flex-grow-1 swFont" id="home">
+        <a href="forum.php" class="navbar-brand flex-grow-1 swFont" id="home">
             <h1>swweb</h1>
         </a>
 
         <a class="btn mx-0 px-2 d-md-none" data-bs-toggle="collapse" href="#search" role="button" aria-expanded="false" aria-controls="search">
             <i class="bi bi-search icon-grey" style="font-size: 25px;"></i>
-            
+
         </a>
-  
-        <a class="btn mx-0 px-2 d-none d-md-flex" >
-             <i class="bi bi-info-circle-fill icon-grey"></i>
+
+        <a class="btn mx-0 px-2 d-none d-md-flex" href="about.php">
+            <i class="bi bi-info-circle-fill icon-grey"></i>
         </a>
-      
 
-    <div class="m-0">
-    <button type="button" class="btn m-0 p-0 " data-bs-toggle="modal" data-bs-target="#userModal">
-            <i class="bi bi-person-fill icon-grey" ></i>
-        </button>
+
+        <div class="m-0">
+            <button type="button" class="btn m-0 p-0 " data-bs-toggle="modal" data-bs-target="#userModal">
+                <i class="bi bi-person-fill icon-grey"></i>
+            </button>
+        </div>
+
     </div>
-        
+
+    <div class="row  d-none d-md-flex">
+
+        <ul class="nav swTitle  bar  m-0 p-0 justify-content-center text-uppercase">
+
+            <li class="nav-item   ">
+                <a class="nav-link  text-reset" href="#">Home</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link text-reset" href="../pages/quiz.php">Quiz</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link  text-reset" href="../pages/databank.php">Databank</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link active text-reset" href="../pages/forum.php">Forum</a>
+            </li>
+
+        </ul>
+
     </div>
-
-<div class="row  d-none d-md-flex">
-
-<ul class="nav swTitle  bar  m-0 p-0 justify-content-center text-uppercase">
-
-        <li class="nav-item   ">
-            <a class="nav-link  text-reset" href="#">Home</a>
-        </li>
-        <li class="nav-item  ">
-            <a class="nav-link text-reset" href="#">Quiz</a>
-        </li>
-        <li class="nav-item  ">
-            <a class="nav-link  text-reset" href="#">Databank</a>
-        </li>
-        <li class="nav-item  ">
-            <a class="nav-link active text-reset" href="#">Forum</a>
-        </li>
-
-    </ul>
-
-</div>
 </nav>

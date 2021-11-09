@@ -1,20 +1,18 @@
 /* Fonts */
 @font-face { /* swFont */
     font-family: swFont;
-    src: url("../../assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf");
-    
+    src: url("./assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf");
 }
 
 @font-face{ /* tile */
     font-family: title;
-    src: url("../../assets/fonts/Titles\ -\ DIN\ Next\ LT\ Pro\ Medium.ttf");
+    src: url("./assets/fonts/Titles\ -\ DIN\ Next\ LT\ Pro\ Medium.ttf");
 }
 
 @font-face{ /* text */
     font-family: text;
-    src: url("../../assets/fonts/Text\ -\ DIN\ Next\ LT\ Arabic\ Regular.ttf") ;
+    src: url("./assets/fonts/Text\ -\ DIN\ Next\ LT\ Arabic\ Regular.ttf") ;
 }
-
 
 
 
@@ -145,8 +143,7 @@ body{
     background: #151515;
 }
 .card{
-    background-color: transparent;
-    border: none;
+    background: #151515;
 }
 .card-title{
   color: #ffc500; 
@@ -220,10 +217,6 @@ body{
     color: #ffc500;
 }
 
-.btn-secondary{
-    background-color: transparent;
-}
-
 /* Media query */
 
 @media screen and (min-width:768px) {
@@ -248,4 +241,28 @@ a:active {color: #ffc500;}
     color: black !important;
     background-color: #ffc500 !important;
     border: 1px black solid !important;
+}
+
+.banner{
+    text-align: center;
+}
+.imagem{
+    width: 270px;
+    height: 270px;
+}
+a[disabled="disabled"] {
+    pointer-events: none;
+}
+a:hover{
+    color: #ffc500;
+}
+.detail{
+    color: #999999;
+}
+.imgProjeto{
+    align-self: center;
+}
+.border{
+    border:none;
+    border-bottom: #ffc500;
 }

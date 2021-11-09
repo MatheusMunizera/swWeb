@@ -6,7 +6,7 @@
         <i class="bi bi-chat-fill " style="color: grey; font-size: 25px;"></i>
     </div>
 
-    <div class="col-4 text-start">
+    <article class="col-4 text-start">
 
         <h6 class="swText m-0  text-nowrap">Titulo do post</h6>
 
@@ -15,7 +15,7 @@
         </p>
 
 
-    </div>
+    </article>
 
     <div class="col-3 offset-1 py-2 text-end ">
         <h6 class="swText text-nowrap m-0  "> Username</h6>

@@ -6,9 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- Meu CSS  -->
-     <link rel="stylesheet" href="./styles/forum.css">
-    <link rel="stylesheet" href="./styles/search.css">
-    <link rel="stylesheet" href="./styles/navbar.css"> 
+     <link rel="stylesheet" href="../styles/forum.css">
+    <link rel="stylesheet" href="../styles/search.css">
+    <link rel="stylesheet" href="../styles/navbar.css"> 
 
   
     <meta charset="UTF-8">
@@ -21,32 +21,34 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <?php require "./app/content/components/navbar.php" ?>
+   
 
     <header class="jumbotron">
-        <div class="container-fluid">
-            <div class="row d-block ">
+         <!-- NAVBAR -->
+    <?php require "../components/navbar.php" ?>
+        
+            <section class="row d-block container-fluid ">
 
                 <!-- SEARCHBOX -->
 
                 <div class=" collapse d-md-none text-center" id="search">
-                    <?php include  './app/content/components/searchbox.php' ?>
+                    <?php include  '../components/searchbox.php' ?>
                 </div>
 
                 <div class="text-center d-none d-md-block">
-                    <?php include  './app/content/components/searchbox.php' ?>
+                    <?php include  '../components/searchbox.php' ?>
                 </div>
 
                 <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">FORUM</h1>
-            </div>
-        </div>
+
+            </section>
+     
     </header>
 
     <main role="main">
 
         <section class="row d-lg-none">
-            <div class="btn-group col-4">
+            <nav class="btn-group col-4">
                 <button type="button" class="btn topic-selected p-0 m-0 bg-transparent dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     GERAL
                 </button>
@@ -60,33 +62,33 @@
                     <li><a class="dropdown-item" href="#">Filmes</a></li>
                     <li><a class="dropdown-item" href="#">Series</a></li>
                 </ul>
-            </div>
-            <div class="col-2 offset-5 text-end">
+            </nav>
+            <section class="col-2 offset-5 text-end">
                 <button type="button" class="btn btn-outline-sw  " data-bs-toggle="modal" data-bs-target="#createPostModal">
                     <i class="bi bi-plus-lg "></i>
                 </button>
-            </div>
+            </section>
         </section>
 
 
         <section class="row d-none d-lg-block">
-            <?php require "./app/content/components/typesbar.php" ?>
+            <?php require "../components/typesbar.php" ?>
 
-            <div class="px-5 mx-5 my-3 ">
+            <section class="px-5 mx-5 my-3 ">
                 <button type="button" class="btn btn-outline-sw swTitle " data-bs-toggle="modal" data-bs-target="#createPostModal">
                     CRIAR NOVA DISCUSSÃO
                 </button>
-            </div>
+            </section>
         </section>
 
         <!-- POSTS -->
         <section class="my-3" href="posts.php">
             <a href="posts.php">
-                <?php require './app/content/components/previewposts.php' ?>
+                <?php require '../components/previewposts.php' ?>
 
-                <?php require './app/content/components/previewposts.php' ?>
-                <?php require './app/content/components/previewposts.php' ?>
-                <?php require './app/content/components/previewposts.php' ?>
+                <?php require '../components/previewposts.php' ?>
+                <?php require '../components/previewposts.php' ?>
+                <?php require '../components/previewposts.php' ?>
             </a>
         </section>
 
@@ -96,7 +98,7 @@
 
 
         <!-- Modal Post -->
-        <div class="modal fade " id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
+        <section class="modal fade " id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header ">
@@ -149,7 +151,10 @@
 
                 </div>
             </div>
-        </div>
+        </section>
+
+
+
     </main>
 
 
