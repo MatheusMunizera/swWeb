@@ -1,10 +1,13 @@
 <nav class="navbar navbar-dark bg-black fixed-top d-block position-sticky text-center ">
     <div class="container-fluid">
 
-        <button type="button" class="navbar-toggler p-0 d-md-none " style="border-color: transparent;" data-toggle="collapse" data-target="#navbar">
+        <!-- <button type="button" class="navbar-toggler p-0 d-md-none " style="border-color: transparent;" data-toggle="collapse" data-target="#navbar">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
+        <button class="navbar-toggler navbar-toggler p-0 d-md-none " style="border-color: transparent;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+         </button>
 
         <div class="row">
             <div class="col">
@@ -72,4 +75,44 @@
         </ul>
 
     </div>
+
+
+    <div class="offcanvas offcanvas-start bg-dark float-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header row">
+          <div class="col-12 text-center">
+          <button type="button" class="btn-close btn-close-white text-reset float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <figure >
+            <img class="offcanvas-title" id="offcanvasNavbarLabel" src="../../assets/icons/homem.png" alt="">
+
+        </figure>
+        <h3 class="swFont" id="username">Username</h3>
+          </div>
+        
+      </div>
+
+
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item   ">
+                <a class="nav-link-sm nav-link active-sm swTitle fs-2" href="../pages/home.php">Home</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link-sm nav-link swTitle fs-2" href="../pages/quiz.php">Quiz</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link-sm nav-link  swTitle fs-2" href="../pages/databank.php">Databank</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link-sm nav-link  swTitle fs-2" href="../pages/forum.php">Forum</a>
+            </li>
+            <li class="nav-item  ">
+                <a class="nav-link-sm nav-link  swTitle fs-2" href="../pages/about.php">Sobre nós</a>
+            </li>
+      </div>
+
+
+    </div>
+
+
 </nav>

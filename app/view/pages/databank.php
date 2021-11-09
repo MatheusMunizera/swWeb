@@ -54,9 +54,11 @@
 
         <!-- bank -->
         <section class="text-center">
+           <a href="../pages/info.php">
+
            
         <?php require "../components/bankItem.php" ?>
-     
+        </a>
         </section>
     </main>
 

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- Meu CSS  -->
     <link rel="stylesheet" href="../styles/quiz.css" />
+    <link rel="stylesheet" href="../styles/search.css">
+    <link rel="stylesheet" href="../styles/navbar.css"> 
 
     <title>Quiz</title>
 </head>
@@ -47,7 +49,7 @@
                </figure>
           
             <br />
-            <article id='quiz'></article>
+            <article id='quiz' class="text-white" ></article>
             <button class='button btn' id='next'><a href='#'>Próxima</a></button>
             <button class='button' id='prev'><a href='#'>Anterior</a></button>
             <button class='button' id='start'> <a href='#'>Reiniciar</a></button>

@@ -42,4 +42,29 @@
     border-color: transparent;
 }
 
+.bg-dark{
+    background-color: #151515 !important;
+}
 
+.offcanvas-header{
+    --bs-gutter-x: 0rem;
+    border-bottom: #999999 1px solid;
+}
+
+.offcanvas-body{
+    padding: 0;
+    padding-top: 1.5rem !important;
+}
+
+.nav-link-sm{
+    
+    text-align: left;
+    
+    padding-left: 3rem !important;
+}
+.nav-link.active-sm{
+    background-color: #FAF68D;
+    color: #151515 !important;
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+}

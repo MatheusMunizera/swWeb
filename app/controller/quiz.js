@@ -3,35 +3,35 @@
       question: "O primeiro filme da saga foi lançado em",
       choices: [1978, 1976, 1983, 1977, 1975],
       correctAnswer: 0
-    },{
-      question: "E verdade que o rival de Anakin Skywalker na corrida de pods era Watto?",
-      choices: ['Verdadeiro','Falso'],
-      correctAnswer: 0
-    }, {
-      question: "O número da cela onde Leia ficou presa na Estrela da Morte era 2167?",
-      choices: ['Sim','Não, era a cela de numero 2187'],
-      correctAnswer: 1
-    }, {
-      question: "O planeta natal de Han Solo é Bespin?",
-      choices: ['Corellia','Corolla','Bespin','Knowhere'],
-      correctAnswer: 0
-    }, {
-      question: "Em seu duelo com Anakin, Obi-Wan corta todos os quatro membros de seu ex-pupilo?",
-      choices: ['Sim, todos os quatro membros','Nem todos'],
-      correctAnswer: 2
-    }, {
-        question: "A grande revelação de Darth Vader para Luke Skywalker: Eu sou seu...",
-        choices: ['Pai','Filho','Avo','Irmao'],
-        correctAnswer: 0
-      }, {
-        question: "É verdade que: Uma vez, Mestre Yoda, disse: Você ainda tem muito para aprender ?",
-        choices: ['Verdadeira','Nunca Disse isso'],
-        correctAnswer: 1
-      }, {
-        question: "C3PO é fluente em mais de oito milhões de formas de comunicação?",
-        choices: ['Nao','Sim'],
-        correctAnswer: 0
-      }];
+     },{
+       question: "E verdade que o rival de Anakin Skywalker na corrida de pods era Watto?",
+       choices: ['Verdadeiro','Falso'],
+       correctAnswer: 0
+     }, {
+       question: "O número da cela onde Leia ficou presa na Estrela da Morte era 2167?",
+       choices: ['Sim','Não, era a cela de numero 2187'],
+       correctAnswer: 1
+     }, {
+       question: "O planeta natal de Han Solo é Bespin?",
+       choices: ['Corellia','Corolla','Bespin','Knowhere'],
+       correctAnswer: 0
+     }, {
+       question: "Em seu duelo com Anakin, Obi-Wan corta todos os quatro membros de seu ex-pupilo?",
+       choices: ['Sim, todos os quatro membros','Nem todos'],
+       correctAnswer: 2
+     }, {
+         question: "A grande revelação de Darth Vader para Luke Skywalker: Eu sou seu...",
+         choices: ['Pai','Filho','Avo','Irmao'],
+         correctAnswer: 0
+       }, {
+         question: "É verdade que: Uma vez, Mestre Yoda, disse: Você ainda tem muito para aprender ?",
+         choices: ['Verdadeira','Nunca Disse isso'],
+         correctAnswer: 1
+       }, {
+         question: "C3PO é fluente em mais de oito milhões de formas de comunicação?",
+         choices: ['Nao','Sim'],
+         correctAnswer: 0
+       }];
     
     var questionCounter = 0; //Tracks question number
     var selections = []; //Array containing user choices
@@ -73,6 +73,7 @@
     
     // Click handler for the 'Start Over' button
     $('#start').on('click', function (e) {
+      $('.score').hide();
       e.preventDefault();
       
       if(quiz.is(':animated')) {
@@ -81,6 +82,7 @@
       questionCounter = 0;
       selections = [];
       displayNext();
+      
       $('#start').hide();
     });
     
@@ -99,10 +101,10 @@
         id: 'question'
       });
       
-      var header = $('<h2>Pergunta ' + (index + 1) + ':</h2>');
+      var header = $('<h2 class="swFont">Pergunta ' + (index + 1) + ':</h2>');
       qElement.append(header);
       
-      var question = $('<p>').append(questions[index].question);
+      var question = $('<p class="swTitle fs-4">').append(questions[index].question);
       qElement.append(question);
       
       var radioButtons = createRadios(index);
@@ -118,7 +120,7 @@
       var input = '';
       for (var i = 0; i < questions[index].choices.length; i++) {
         item = $('<li>');
-        input = '<input type="radio" name="answer" value=' + i + ' />';
+        input = '<input  type="radio" name="answer" value=' + i + ' />';
         input += questions[index].choices[i];
         item.append(input);
         radioList.append(item);
@@ -163,7 +165,7 @@
     
     // Computes score and returns a paragraph element to be displayed
     function displayScore() {
-      var score = $('<p>',{id: 'question'});
+      var score = $('<p class="swTitle text-center score" >',{id: 'question'});
       
       var numCorrect = 0;
       for (var i = 0; i < selections.length; i++) {
@@ -172,8 +174,8 @@
         }
       }
       
-      score.append('Você acertou ' + numCorrect + 'questões de ' +
-                   questions.length + 'Dale!!!');
+      score.append('Você acertou ' + numCorrect + ' questões de ' +
+                   questions.length + ' ,Parabéns!!!');
       return score;
     }
   })();
