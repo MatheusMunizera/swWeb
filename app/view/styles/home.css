@@ -1,0 +1,162 @@
+@font-face { /* swFont */
+    font-family: swFont;
+    src: url("../../assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf");
+    
+}
+
+@font-face{ /* tile */
+    font-family: title;
+    src: url("../../assets/fonts/Titles\ -\ DIN\ Next\ LT\ Pro\ Medium.ttf");
+}
+
+@font-face{ /* text */
+    font-family: text;
+    src: url("../../assets/fonts/Text\ -\ DIN\ Next\ LT\ Arabic\ Regular.ttf") ;
+}
+
+body{
+    background-color: #151515;
+}
+
+a{
+    text-decoration: none;
+}
+
+#carouselExampleSlidesOnly>img{
+    margin-top: -10%;
+    position: center center;
+    width: 100px;
+}
+
+.icon-yellow{
+    font-size: 30px;
+    color: #ffc500;
+    text-decoration: none;
+}
+
+.icon-grey{
+    font-size: 30px;
+    color: #999999;
+    text-decoration: none;
+    border-color: transparent;
+    border: none;
+}
+
+.bar{
+    border: #999999 1px solid;
+
+
+}
+
+.bar>li{
+    border: #999999 1px solid;
+    border-top: none;
+    border-bottom: none;
+    color: #999999;
+
+}
+
+.bar>li:hover{
+    color:white;
+}
+
+.icon-yellow:hover{
+    color:#999999;
+}
+
+.icon-grey:hover{
+    color:#ffc500;
+}
+
+.navbar-toggler{
+    border-color: transparent;
+}
+
+/*Slider*/
+
+.container-fluid{
+    padding: 0;
+}
+
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: 80vh;
+}
+
+#mainSlider .carousel-caption{
+    top:30%;
+}
+
+#mainSlider .carousel-caption h2{
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+    margin-left: -20%;
+}
+
+#mainSlider .carousel-caption p{
+    font-size: 22px;
+    font-weight: 300;
+    color: #FFF;
+    text-align: left;
+    margin-left: -20%;
+}
+
+
+
+#about-area{
+    margin-top: 150px;
+    background-color: #151515;
+}
+
+.main-title{
+    color: #FFF;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after{
+    content: "";
+    border-top: 2px solid #FFF;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title{
+    font-size: 17px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+p{
+    color: #FFF;
+}
+
+/* card */
+
+.card-body {
+    text-align: center;
+    background-color: #151515;
+    
+}
+
+
+.news{
+    border-top: #999999 1px solid;
+    border-bottom: #999999 1px solid;
+    color: #FFF;
+    padding-left: 2rem;
+}
+
+.bg-stars{
+    background-image: url("../../assets/images/bgStarws.webp");
+}
+
+.ea-img{
+    max-width: 500px !important;
+    
+}
+
