@@ -49,7 +49,7 @@
 
     <!-- Page content -->
     <main class="container">
-        <section class="card" style="">
+        <section class="card" >
             <div class="row g-0">
                 <figure class="col-md-6 text-center">
                     <img src="../../assets/images/databank_ackbar_01_169_55137220.png" class="img-fluid img-desk" alt="...">

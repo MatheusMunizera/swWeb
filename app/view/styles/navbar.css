@@ -54,6 +54,7 @@
 .offcanvas-body{
     padding: 0;
     padding-top: 1.5rem !important;
+    border-bottom: #999999 1px solid;
 }
 
 .nav-link-sm{
@@ -68,3 +69,8 @@
     border-bottom-right-radius: 5rem;
     border-top-right-radius: 5rem;
 }
+
+#aside-links{
+    border-bottom: none !important;
+}
+

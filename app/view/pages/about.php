@@ -83,7 +83,7 @@
       <h3 class="swFont flex-grow-1 text-center my-1 display-5">Projetos</h3>
    
 
-    <section class="card" style="">
+    <section class="card" >
       <img src="../../assets/images/Icon feather-smartphone.png" class="imgProjeto ">
       <article class="card-body">
         <h5 class="card-text p-0 text-center">SwApp</h5>
@@ -97,7 +97,7 @@
       </article>
     </section>
 
-    <section class="card" style="">
+    <section class="card" >
       <img src="../../assets/images/Icon material-computer.png" class="imgProjeto ">
       <article class="card-body">
         <h5 class="card-text p-0 text-center">SwApp</h5>
@@ -110,7 +110,7 @@
       </article>
     </section>
 
-    <section class="card" style="">
+    <section class="card" >
       <img src="../../assets/images/Grupo 146.png" class="imgProjeto ">
       <article class="card-body">
         <h5 class="card-text p-0 text-center">SwApp</h5>
@@ -122,7 +122,7 @@
       </article>
     </section>
 
-    <section class="card" style="">
+    <section class="card" >
       <img src="../../assets/images/Icon awesome-book.png" class="imgProjeto ">
       <article class="card-body">
         <h5 class="card-text p-0 text-center">SwApp</h5>
@@ -134,7 +134,7 @@
       </article>
     </section>
 
-    <section class="card" style="">
+    <section class="card" >
       <img src="../../assets/images/Icon awesome-database.png" class="imgProjeto ">
       <article class="card-body">
         <h5 class="card-text p-0 text-center">SwApp</h5>

@@ -33,7 +33,7 @@
 
         </div>
 
-        <a href="forum.php" class="navbar-brand flex-grow-1 swFont" id="home">
+        <a href="home.php" class="navbar-brand flex-grow-1 swFont" id="home">
             <h1>swweb</h1>
         </a>
 
@@ -60,7 +60,7 @@
         <ul class="nav swTitle  bar  m-0 p-0 justify-content-center text-uppercase">
 
             <li class="nav-item   ">
-                <a class="nav-link  text-reset" href="#">Home</a>
+                <a class="nav-link  text-reset" href="../pages/home.php">Home</a>
             </li>
             <li class="nav-item  ">
                 <a class="nav-link text-reset" href="../pages/quiz.php">Quiz</a>
@@ -77,7 +77,7 @@
     </div>
 
 
-    <div class="offcanvas offcanvas-start bg-dark float-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-start bg-dark float-start d-md-none d-flex" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header row">
           <div class="col-12 text-center">
           <button type="button" class="btn-close btn-close-white text-reset float-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -110,6 +110,41 @@
                 <a class="nav-link-sm nav-link  swTitle fs-2" href="../pages/about.php">Sobre nós</a>
             </li>
       </div>
+
+
+      <div class="offcanvas-header row" id="aside-links">
+          <div class="col text-center">
+          <figure >
+            <img class="offcanvas-title" id="offcanvasNavbarLabel" src="../../assets/icons/dart.png" alt="">
+        </figure>
+        
+          </div>
+        
+      </div>
+
+
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item  nav-link-sm ">
+                 <a href="https://github.com/matheusMunizera" class="icon-grey ">
+                        <i class="bi bi-github swTitle nav-link fs-3"> GitHub</i>
+                  </a>
+            </li>
+            <li class="nav-item  nav-link-sm   ">
+            <a href="https://www.youtube.com/channel/UCih5H8dNtieYjGFSnYtgZzA/featured" class="icon-grey">
+                    <i class="bi bi-youtube swTitle nav-link fs-3"> Youtube</i>
+                </a>
+            </li>
+            <li class="nav-item nav-link-sm  ">
+            <a href="https://discord.gg/hrFKyrrDRH" class="icon-grey">
+                    <i class="bi bi-discord swTitle nav-link fs-3"> Discord</i>
+                </a>
+            </li>
+            
+      </div>
+
+
 
 
     </div>
