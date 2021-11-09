@@ -1,0 +1,22 @@
+
+
+footer {
+  margin-top: 60vh;
+  padding: 2rem 0;
+  
+  background-image: url("../../assets/images/dart-footer.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  
+}
+
+.nav-link-footer{
+  
+    padding: .5rem 1rem;
+     color: #ffc500 !important;
+
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+

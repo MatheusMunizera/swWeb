@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/quiz.css" />
     <link rel="stylesheet" href="../styles/search.css">
     <link rel="stylesheet" href="../styles/navbar.css"> 
+    <link rel="stylesheet" href="../styles/footer.css">
 
     <title>Quiz</title>
 </head>
@@ -62,7 +63,7 @@
     </main>
 
 
-    
+    <?php require "../components/footer.php" ?>
     <!-- Jquery -->
    
     <script src="../../controller/quiz.js"></script>

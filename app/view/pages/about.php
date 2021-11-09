@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../styles/about.css">
   <link rel="stylesheet" href="../styles/search.css">
  <link rel="stylesheet" href="../styles/navbar.css"> 
+ <link rel="stylesheet" href="../styles/footer.css">
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -152,7 +153,7 @@
 
 
 
-
+ <?php require "../components/footer.php" ?>
 
 
 

@@ -9,6 +9,7 @@
      <link rel="stylesheet" href="../styles/forum.css">
     <link rel="stylesheet" href="../styles/search.css">
     <link rel="stylesheet" href="../styles/navbar.css"> 
+    <link rel="stylesheet" href="../styles/footer.css">
 
   
     <meta charset="UTF-8">
@@ -162,7 +163,7 @@
 
 
 
-
+    <?php require "../components/footer.php" ?>
 
 
 
