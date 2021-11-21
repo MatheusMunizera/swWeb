@@ -75,7 +75,8 @@
          
             include '../../database/connection.php';
 
-            $sql = "SELECT * FROM `questions` WHERE 1";
+            $sql = "SELECT * FROM `questions`  order by `id_question` DESC";
+            // $sql = "SELECT * FROM `questions` WHERE 1";
             $busca = mysqli_query($connection, $sql);
 
             while ($array = mysqli_fetch_array($busca)) {

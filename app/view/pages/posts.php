@@ -1,6 +1,6 @@
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/forum.css">
-<link rel="stylesheet" href="../styles/article-posts.css">
+<link rel="stylesheet" href="../styles/main-post.css">
 </head>
 
 <body>
@@ -38,20 +38,43 @@
             $id = $_GET['id'];
             $sql = "SELECT * FROM `questions` WHERE `id_question` = $id";
             $busca = mysqli_query($connection, $sql);
-            $array = mysqli_fetch_array($busca);
+            $array_questions = mysqli_fetch_array($busca);
 
-            $id = $array['id_question'];
-            $title = $array['title'];
-            $theme = $array['theme'];
-            $text = $array['text'];
+            $id = $array_questions['id_question'];
+            $title = $array_questions['title'];
+            $theme = $array_questions['theme'];
+            $text = $array_questions['text'];
 
 
 
             ?>
-            <?php include  '../components/article-post.php' ?>
+            <?php include  '../components/main-post.php' ?>
 
-            <!-- <?php include  '../components/reverse-article-post.php' ?> -->
 
+
+            <?php
+
+            $sql = "SELECT * FROM `answers` WHERE `id_question` = $id";
+            $busca = mysqli_query($connection, $sql);
+            $cont = 2;
+            while($array_answers = mysqli_fetch_array($busca)){
+
+                $id_answer = $array_answers['id_answer'];
+                $text_answer = $array_answers['text'];
+               
+                if ($cont % 2 == 0) {
+            ?>
+                <?php include  '../components/answer-post.php' ?>
+                <?php }else{ ?>
+                    	
+                 <?php include  '../components/reverse-answer-post.php' ?>
+
+                <?php } ?>
+
+
+            <?php 
+                 $cont++;
+             } ?>
 
         </div>
 

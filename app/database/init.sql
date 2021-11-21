@@ -5,3 +5,10 @@ create table questions (
     text text not null,
     PRIMARY KEY(id_question)
 )
+
+create table answers (
+    id_answer int AUTO_INCREMENT,
+    id_question int not null,
+    text text not null,
+    PRIMARY KEY(id_answer)
+)
