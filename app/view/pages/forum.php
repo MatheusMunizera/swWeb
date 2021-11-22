@@ -2,16 +2,6 @@
 <link rel="stylesheet" href="../styles/forum.css">
 </head>
 
-
-<?php 
-  $type = $_GET['theme'];
-
-  if(empty($type)){
-      $type = 'Geral';
-  }
-?>
-
-
 <body>
 
 
@@ -72,7 +62,14 @@
 
             include '../../database/connection.php';
 
-            $sql = "SELECT * FROM `questions`  WHERE theme = '$type' order by `id_question` DESC";
+            if (empty($_GET['theme']) || $_GET['theme'] == "Geral") {
+                $sql = "SELECT * FROM `questions`  order by `id_question` DESC";
+            } else {
+
+                $type = $_GET['theme'];
+                $sql = "SELECT * FROM `questions`  WHERE theme = '$type' order by `id_question` DESC";
+            }
+
             // $sql = "SELECT * FROM `questions` WHERE 1";
             $busca = mysqli_query($connection, $sql);
 

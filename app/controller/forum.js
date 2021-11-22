@@ -3,3 +3,5 @@ function goToPost(){
         location.href="posts.html";
     }
 }
+
+onsubmit($('#text').tinymce().save());

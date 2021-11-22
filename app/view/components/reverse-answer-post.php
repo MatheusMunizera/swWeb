@@ -1,8 +1,8 @@
 <div class="container ">
-    <div class="row m-2 pt-5 mt-5">
+    <div class="row m-2 pb-5 mb-5">
         <div class="col-4 p-0 col-sm-2 align-self-start text-center ">
             <i class="bi bi-person-circle" style="font-size: 50px; color:#ffc500;"></i>
-            <h6 class="swText p-0 text-center"> Username</h6>
+            <h6 class="swText p-0 text-center text-break"> Username</h6>
             <a href="../pages/edit-answer.php?id=<?php echo $id_answer ?>" class="d-none d-md-inline btn btn-outline-sw m-0">
 
                 EDITAR
@@ -25,14 +25,14 @@
                 <i class="bi bi-trash"></i>
             </a>
 
-            <p class="p-2  d-none d-md-flex swText text-capitalize text-uppercase bg-clear-grey">
+            <p class="p-2 text-break img-anexada d-none d-md-flex swText bg-clear-grey">
                 <?php echo $text_answer ?>
             </p>
         </div>
 
         <div class="row">
 
-            <p class="p-2 mx-3 d-md-none swText text-capitalize text-uppercase bg-clear-grey">
+            <p class="p-2 text-break img-anexada mx-3 d-md-none swText bg-clear-grey">
             <?php echo $text_answer ?>
             </p>
         </div>

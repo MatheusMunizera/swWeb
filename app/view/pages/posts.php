@@ -1,6 +1,7 @@
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/forum.css">
 <link rel="stylesheet" href="../styles/main-post.css">
+<link rel="stylesheet" href="../styles/form.css">
 </head>
 
 <body>

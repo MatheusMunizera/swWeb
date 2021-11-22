@@ -1,5 +1,8 @@
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/forum.css">
+<link rel="stylesheet" href="../styles/form.css">
+<script src="../../controller/forum.js"></script>
+ 
 </head>
 
 
@@ -21,7 +24,7 @@
                 <label for="title" class="swTitle d-block" style="color: #ffc500;">Titulo:
                     <div>
                         <p class="swText text-muted">Seja criativo, imagine que esteja perguntando algo a alguém</p>
-                        </div>
+                    </div>
                 </label>
                 <input id="title" name="title" type="text" class="form-control" placeholder="Exemplo: Como surgiu o nome han solo?" required>
                 <div class="invalid-feedback"> </div>
@@ -41,11 +44,15 @@
 
             <div class="form-group">
                 <label for="text" class="swTitle d-block" style="color: #ffc500;">Descrição:
-                   <div>
+                    <div>
                         <p class="swText text-muted">Você pode detalhar melhor sua pergunta ou detalhar melhor sua teoria</p>
-                        </div>
+                    </div>
 
                 </label>
+               
+                        
+
+
                 <textarea id="text" name="text" type="text" class="form-control" rows="8" placeholder="Han solo foi um apelidado com esse nome pois..." required></textarea>
             </div>
 
@@ -58,8 +65,6 @@
     </div>
 
 
-
-    
 
     <?php require "../components/footer.php" ?>
     <?php require "../components/script.php" ?>

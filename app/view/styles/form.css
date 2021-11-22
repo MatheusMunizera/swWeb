@@ -1,0 +1,23 @@
+.tox .tox-toolbar,
+.tox .tox-toolbar__primary,
+.tox .tox-toolbar__overflow {
+  background-color: #151515 !important;
+}
+
+.tox .tox-tbtn svg {
+    fill: #ffc500 !important;
+}
+
+.tox .tox-tbtn--bespoke .tox-tbtn__select-label {
+  color: white;
+}
+
+.tox-tinymce {
+  border: 3px solid #9999;
+}
+
+
+.img-anexada> p > img{
+  max-width: 50%;
+  height: auto;
+}

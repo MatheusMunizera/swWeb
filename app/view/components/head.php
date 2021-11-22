@@ -8,6 +8,7 @@
     <!-- Meu CSS  -->
      <link rel="stylesheet" href="../styles/styles.css">
  
+     <script src="https://cdn.tiny.cloud/1/o3w6g1eon6pj16tyeho4bok4bpi6px0v910zrbpdvpjbpugp/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

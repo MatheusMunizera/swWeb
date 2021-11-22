@@ -1,5 +1,5 @@
 <?php require "../view/components/head.php" ?>
-<link rel="stylesheet" href="../styles/forum.css">
+
 </head>
 
 <body>

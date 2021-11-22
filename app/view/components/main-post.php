@@ -2,7 +2,7 @@
     <div class="row m-2">
         <div class="col-4 p-0 col-sm-2 align-self-start text-center ">
             <i class="bi bi-person-circle" style="font-size: 50px; color:#ffc500;"></i>
-            <h6 class="swText p-0 text-center"> Username</h6>
+            <h6 class="swText p-0 text-center text-break"> Username</h6>
             <a href="../pages/edit-post.php?id=<?php echo $id ?>" class="d-none d-md-inline btn btn-outline-sw m-0">
 
                 EDITAR
@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="col p-0 align-self-center text-start my-3">
-            <h1 class=" swTitle post-title m-0  text-capitalize  "><?php echo $title ?></h1>
+            <h1 class=" swTitle post-title m-0  text-capitalize text-break "><?php echo $title ?></h1>
 
             <!-- <p class="post-date m-0 p-0">
                 Data e hora do post
@@ -31,16 +31,16 @@
                 <i class="bi bi-trash"></i>
             </a>
 
-            <p class="p-2  d-none d-md-flex swText text-capitalize text-uppercase bg-clear-grey">
-                <?php echo $text ?>
-            </p>
+            <div class="p-2 img-anexada text-break d-none d-md-block swText bg-clear-grey">
+            <?php echo $text ?>
+            </div>
         </div>
 
         <div class="row">
 
-            <p class="p-2 mx-3 d-md-none swText text-capitalize text-uppercase bg-clear-grey">
+            <div class="p-2 img-anexada text-break mx-3 d-md-none swText  bg-clear-grey">
                 <?php echo $text ?>
-            </p>
+    </div>
         </div>
 
     </div>
@@ -55,8 +55,12 @@
             </label>
             <textarea id="text" name="text" type="text" class="form-control" rows="4" placeholder="Eg. Eu acho que o está correto, porém quando se trata de..." required></textarea>
             <input id="id" name="id_question" type="number" class="d-none" hidden  value="<?php echo $id ?>" >
-            <button type="submit" class="btn btn-outline-sw">Enviar</button>
+            <button type="submit" class="btn btn-outline-sw float-end">Enviar</button>
         </form>
     </div>
+
+  
+        <h1 class="swFont text-center ">Respostas</h1>
+  
 
 </div>
