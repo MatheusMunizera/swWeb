@@ -1,11 +1,6 @@
-<?php
-
-include '../../database/connection.php';
-
-$id = $_GET['id'];
-
-?>
-
+<?php   
+include_once("../../model/question.php");
+session_start(); ?>
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/forum.css">
 </head>
@@ -15,40 +10,38 @@ $id = $_GET['id'];
     <!-- NAVBAR -->
     <?php require "../components/navbar.php" ?>
 
+    <?php
+  
+ 
+    
+    $id = $_SESSION["obj_question"]->getId();
+    $title = $_SESSION["obj_question"]->getTitle();
+    $theme = $_SESSION["obj_question"]->getTheme();
+    $text = $_SESSION["obj_question"]->getText();
+    ?>
 
-    <div class="container ">
+     <div class="container ">
         <div class="jumbotron container-fluid m-3">
             <h1 class="swFont"> Editando seu post</h1>
-        </div>
+        </div> 
 
 
-        <form action="../../controller/_update_post.php" method="post">
-            <?php
-            $sql = "SELECT * FROM `questions` WHERE id_question = $id";
-            $buscar = mysqli_query($connection, $sql);
-
-            while ($array = mysqli_fetch_array($buscar)) {
-
-                $id_question = $array['id_question'];
-                $title = $array['title'];
-                $theme = $array['theme'];
-                $text = $array['text'];
-
-
-            ?>
+         <form action="../../controller/questions.php" method="post">
+         
                 <div class="form-group">
                     <label for="title" class="swTitle d-block" style="color: #ffc500;">Titulo:
                         <div>
                             <p class="swText text-muted">Seja criativo, imagine que esteja perguntando algo a alguém</p>
                         </div>
                     </label>
-                    <input id="title" name="title" type="text" class="form-control" placeholder="Exemplo: Como surgiu o nome han solo?" value="<?php echo $title ?>" >
-                    <input id="id" name="id_question" type="number" class="d-none" hidden  value="<?php echo $id ?>" >
+                    <input id="title" name="title" type="text" class="form-control" placeholder="Exemplo: Como surgiu o nome han solo?" value="<?php echo $title?>" >
+                    <input id="id" name="id" type="number" class="d-none" hidden  value="<?php echo $id ?>" >
                     <div class="invalid-feedback"> </div>
                 </div>
                 <div class="form-group my-2">
                     <label for="theme" class="swTitle" style="color: #ffc500;">Tema:</label>
                     <select id="theme" name="theme" class="form-control" >
+                        <option><?php echo $theme ?></option>
                         <option>Geral</option>
                         <option>Personagens</option>
                         <option>Veículos</option>
@@ -71,12 +64,12 @@ $id = $_GET['id'];
                         
                 <div class="modal-footer">
                     <a href="../pages/forum.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
-                    <button type="submit" class="btn btn-outline-sw">Atualizar</button>
+                    <button type="submit" name="save-edit" class="btn btn-outline-sw">Atualizar</button>
 
                 </div>
-                <?php } ?>
+
         </form>
-    </div>
+    </div> 
 </body>
 
 <?php require "../components/footer.php" ?>

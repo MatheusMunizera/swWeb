@@ -58,35 +58,7 @@
 
         <!-- POSTS -->
         <section class="my-3">
-            <?php
-
-            include '../../database/connection.php';
-
-            if (empty($_GET['theme']) || $_GET['theme'] == "Geral") {
-                $sql = "SELECT * FROM `questions`  order by `id_question` DESC";
-            } else {
-
-                $type = $_GET['theme'];
-                $sql = "SELECT * FROM `questions`  WHERE theme = '$type' order by `id_question` DESC";
-            }
-
-            // $sql = "SELECT * FROM `questions` WHERE 1";
-            $busca = mysqli_query($connection, $sql);
-
-            while ($array = mysqli_fetch_array($busca)) {
-
-                $id_question = $array['id_question'];
-                $title = $array['title'];
-                $theme = $array['theme'];
-                $text = $array['text'];
-
-
-            ?>
-                <a href="./posts.php?id=<?php echo $id_question ?>">
-                    <?php require '../components/previewposts.php' ?>
-                </a>
-
-            <?php } ?>
+                    <?php require '../../controller/questions.php' ?>
         </section>
 
 

@@ -19,7 +19,7 @@
         </div>
 
 
-        <form action="../../controller/_add_post.php" method="POST">
+        <form action="../../controller/questions.php" method="POST">
             <div class="form-group">
                 <label for="title" class="swTitle d-block" style="color: #ffc500;">Titulo:
                     <div>
@@ -58,7 +58,7 @@
 
             <div class="modal-footer">
                 <a href="./forum.php"><button type="button" class="btn btn-danger">Cancelar</button></a>
-                <button type="submit" class="btn btn-outline-sw">Enviar</button>
+                <button type="submit" name="create" class="btn btn-outline-sw">Enviar</button>
 
             </div>
         </form>
