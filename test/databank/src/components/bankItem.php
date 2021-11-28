@@ -1,5 +1,5 @@
 <?php 
-         $hg = file_get_contents("https://matheusmunizera.github.io/swAPI/api/allCharacters.json");
+         $hg = file_get_contents($request);
          $characters = json_decode($hg);
         foreach ($characters as $value) { ?>
             <div class="card-col">
