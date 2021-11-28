@@ -20,7 +20,7 @@
     display: block;
     width:150px;
     height:150px;        
-    border: 2px solid yellow;
+    border: 2px solid #ffc500;
 }
 
 .card-body{
