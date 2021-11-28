@@ -1,110 +1,20 @@
-<div class="car-row">
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
+<?php 
+         $hg = file_get_contents("https://matheusmunizera.github.io/swAPI/api/allCharacters.json");
+         $characters = json_decode($hg);
+        foreach ($characters as $value) { ?>
+            <div class="card-col">
+                <div class="container">
+                    <div class="left_Side">
+                      <a href="./info.php?id='<?php echo $value->id?>'">
+                        <header class="card-head">
+                            <img class="img-flex" src=<?php echo $value->image ?> alt=<?php echo $value->resume?>>
+                        </header>
+                        <div class="card-body swText">
+                            <p><?php echo $value->name ?></p>
+                        </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card-col">
-        <div class="container">
-            <div class="left_Side">
-                <header class="card-head">
-                    <img class="img-flex" src="Images/databank_ackbar_01_169_55137220.png" alt="">
-                </header>
-                <div class="card-body swText">
-                    <p>Lorem ipsum</p>
-                </div>
-            </div>
-        </div>
-    </div>    
+            </div>               
+        <?php }?> 
 </div>
