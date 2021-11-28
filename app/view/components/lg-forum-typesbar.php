@@ -8,6 +8,8 @@
         <li class="nav-item  ">
             <a class="nav-link text-reset" href="../pages/forum.php?theme=Series">Series</a>
         </li>
+
+      
         <li class="nav-item  ">
             <a class="nav-link  text-reset" href="../pages/forum.php?theme=Filmes">Filmes</a>
         </li>

@@ -4,8 +4,6 @@
 
 <body>
 
-
-
     <header class="jumbotron">
         <!-- NAVBAR -->
         <?php require "../components/navbar.php" ?>
@@ -24,6 +22,7 @@
 
             <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">FORUM</h1>
 
+            <?php include  '../components/userModal.php' ?>
         </section>
 
     </header>
@@ -48,17 +47,33 @@
 
         <section class="row d-none d-lg-block">
             <?php require "../components/lg-forum-typesbar.php" ?>
-
             <div class="px-5 mx-5 my-3 ">
+            <?php
+            if (empty($_SESSION['obj_user']) == 1) { ?>
+             
+                    <a data-bs-toggle="modal" href="#userModalToggle" role="button" class="btn btn-outline-sw swTitle">
+                            CRIAR NOVA DISCUSSÃO
+                        </a>
+                
+            <?php } else{
+                $id_user = $_SESSION["obj_user"]->getIdUser();
+                $username = $_SESSION["obj_user"]->getUsername();
+                $email = $_SESSION["obj_user"]->getEmail();
+                $password = $_SESSION["obj_user"]->getPassword();
+                ?>
+                
                 <a href="./form.php"><button type="button" class="btn btn-outline-sw swTitle">
                         CRIAR NOVA DISCUSSÃO
                     </button></a>
-            </div>
+            <?php }?>
+
+                    </div>
+
         </section>
 
         <!-- POSTS -->
         <section class="my-3">
-                    <?php require '../../controller/questions.php' ?>
+            <?php require '../../controller/questions.php' ?>
         </section>
 
 

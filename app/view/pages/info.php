@@ -22,6 +22,8 @@
 
                 <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">INFO</h1>
 
+                <?php include  '../components/userModal.php' ?>
+
             </section>
      
     </header>

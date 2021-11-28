@@ -21,7 +21,7 @@
             <div class="text-center d-none d-md-block">
                 <?php include  '../components/searchbox.php' ?>
             </div>
-
+            <?php include  '../components/userModal.php' ?>
             <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">DATABANK</h1>
 
         </section>

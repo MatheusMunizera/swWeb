@@ -1,14 +1,14 @@
 <?php
 class AnswerDAO
 {
-    function insert($id_question, $text,  $conn)
+    function insert($id_question, $id_user, $text, $conn)
     {
         try {
-            $sql = "INSERT INTO answers(id_question, text) VALUES (:id_question,:text)";
+            $sql = "INSERT INTO answers(id_question, id_user, text) VALUES (:id_question,:id_user, :text)";
             $stmt = $conn->prepare($sql);
 
             $stmt->execute(array(
-                ":id_question" => "$id_question", ":text" => "$text"
+                ":id_question" => "$id_question", ":id_user" => "$id_user", ":text" => "$text"
             ));
             echo "<script>
             alert('Sucesso ao postar =D');
@@ -19,8 +19,19 @@ class AnswerDAO
         }
     }
 
-    function showByQuestion($id_question, $conn)
+    
+
+    function showByQuestion($id_question,  $conn)
     {
+
+        function findUsernameByID($id_user, $conn){
+       
+            $sql = "SELECT * FROM `users` WHERE `id_user` = $id_user";
+            $consulta = $conn->query($sql);
+            $linha = $consulta->fetch(PDO::FETCH_ASSOC);
+            $username = $linha['username'];
+            return $username;
+        }
 
         $sql = "SELECT * FROM `answers` WHERE `id_question` = $id_question";
 
@@ -32,12 +43,19 @@ class AnswerDAO
         if ($registros) {
             $cont = 2;
             while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-                if ($cont % 2 == 0) {
-                    include  '../components/answer-post.php';
-                } else {
-                    include  '../components/reverse-answer-post.php';
-                }
-                $cont++;
+                $id_question = $linha['id_question'];
+                $id_answer = $linha['id_answer'];
+                $text = $linha['text'];
+                $id_user =$linha['id_user'];
+                $username = findUsernameByID( $id_user, $conn);
+               
+               
+                 if ($cont % 2 == 0) {
+                     include  '../components/answer-post.php';
+                 } else {
+                     include  '../components/reverse-answer-post.php';
+                 }
+                 $cont++;
             }
         } else {
             echo "

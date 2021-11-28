@@ -10,7 +10,7 @@
     <header class="jumbotron">
         <!-- NAVBAR -->
         <?php require "../components/navbar.php" ?>
-
+      
         <section class="row d-block container-fluid ">
 
             <!-- SEARCHBOX -->
@@ -24,7 +24,7 @@
             </div>
 
             <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">POSTS</h1>
-
+            <?php include  '../components/userModal.php' ?>
         </section>
 
     </header>
@@ -34,9 +34,9 @@
         <div class="all-posts">
 
 
-        <?php require '../../controller/questions.php' ?>
+            <?php require '../../controller/questions.php' ?>
 
-        <?php require '../../controller/answers.php' ?>
+            <?php require '../../controller/answers.php' ?>
 
 
 

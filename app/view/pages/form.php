@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../styles/forum.css">
 <link rel="stylesheet" href="../styles/form.css">
 <script src="../../controller/forum.js"></script>
- 
+
 </head>
 
 
@@ -10,8 +10,18 @@
 
     <!-- NAVBAR -->
     <?php require "../components/navbar.php" ?>
+    <?php
+    if (empty($_SESSION['obj_user']) == 1) {  ?>
 
+        <script>
+            window.location = './home.php';
+        </script>
 
+    <?php } else { 
+        $id = $_SESSION["obj_user"]->getIdUser();
+  } ?>
+
+    <?php include  '../components/userModal.php' ?>
 
     <div class="container ">
         <div class="jumbotron container-fluid m-3">
@@ -27,6 +37,7 @@
                     </div>
                 </label>
                 <input id="title" name="title" type="text" class="form-control" placeholder="Exemplo: Como surgiu o nome han solo?" required>
+
                 <div class="invalid-feedback"> </div>
             </div>
             <div class="form-group my-2">
@@ -49,11 +60,10 @@
                     </div>
 
                 </label>
-               
-                        
-
 
                 <textarea id="text" name="text" type="text" class="form-control" rows="8" placeholder="Han solo foi um apelidado com esse nome pois..." required></textarea>
+
+                <input id="id" name="id_user" type="number" class="d-none" required hidden value="<?php echo $id ?>">
             </div>
 
             <div class="modal-footer">

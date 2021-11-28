@@ -12,7 +12,7 @@
     <section class="container-fluid">
       <h1 class="swFont flex-grow-1 text-center my-1 display-5">Sobre Nós</h1>
     </section>
-
+    <?php include  '../components/userModal.php' ?>
   </header>
 
   <!-- Page content -->

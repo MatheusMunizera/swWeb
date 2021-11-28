@@ -1,3 +1,5 @@
+
+
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/home.css">
 <link rel="stylesheet" href="../styles/forum.css">
@@ -22,8 +24,7 @@
                     <?php include  '../components/searchbox.php' ?>
                 </div>
 
-                <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">FORUM</h1>
-
+                <?php include  '../components/userModal.php' ?>
             </section>
      
     </header>

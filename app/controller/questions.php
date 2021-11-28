@@ -17,7 +17,7 @@ $conn = $conexao->connect();
 $questions = new QuestionDAO();
 
 if (isset($_POST["create"])) {
-  $questions->insert($_POST["title"], $_POST["theme"], $_POST["text"], $conn);
+  $questions->insert($_POST["title"], $_POST["theme"], $_POST["text"], $_POST["id_user"], $conn);
 }
 
 if ($isForum) {
@@ -37,7 +37,7 @@ if (isset($_POST["edit"])) {
 }
 
  if (isset($_POST["save-edit"])) {
-   $questions->saveEdit($_POST["id"], $_POST["title"], $_POST["theme"], $_POST["text"],$conn);
+   $questions->saveEdit($_POST["id_question"], $_POST["title"], $_POST["theme"], $_POST["id_user"], $_POST["text"],$conn);
 
  }
 

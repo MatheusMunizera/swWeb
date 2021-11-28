@@ -1,14 +1,14 @@
 <?php
 class QuestionDAO
 {
-    function insert($title, $theme, $text,  $conn)
+    function insert($title, $theme, $text, $id_user,  $conn)
     {
         try {
-            $sql = "INSERT INTO questions(title, theme, text) VALUES (:title,:theme,:text)";
+            $sql = "INSERT INTO questions(title, theme, text, id_user) VALUES (:title,:theme,:text, :id_user)";
             $stmt = $conn->prepare($sql);
             
              $stmt->execute(array(
-                 ":title" => "$title", ":theme" => "$theme", ":text" => "$text"
+                 ":title" => "$title", ":theme" => "$theme", ":text" => "$text", ":id_user" => " $id_user"
              ));
             echo "<script>
             alert('Sucesso ao postar =D');
@@ -32,11 +32,25 @@ class QuestionDAO
         $consulta = $conn->query($sql);
 
         $registros=$consulta->rowCount();
-        
+         
+        function findUsernameByID($id_user, $conn){
+       
+            $sql = "SELECT * FROM `users` WHERE `id_user` = $id_user";
+            $consulta = $conn->query($sql);
+            $linha = $consulta->fetch(PDO::FETCH_ASSOC);
+            $username = $linha['username'];
+            return $username;
+        }
 
         if($registros){
          while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-                include '../components/previewposts.php';
+            $id_question = $linha['id_question'];
+            $title = $linha['title'];
+            $theme = $linha['theme'];
+            $text = $linha['text'];
+            $id_user = $linha['id_user'];
+            $username = findUsernameByID( $id_user, $conn);
+            include '../components/previewposts.php';
 
          }
        
@@ -60,11 +74,18 @@ class QuestionDAO
          
         $consulta = $conn->query($sql);
 
-        $post = $consulta->fetch(PDO::FETCH_ASSOC);
-         $id_question = $post['id_question'];
-         $title = $post['title'];
-         $theme = $post['theme'];
-         $text = $post['text'];
+        $linha = $consulta->fetch(PDO::FETCH_ASSOC);
+         $id_question = $linha['id_question'];
+         $title = $linha['title'];
+         $theme = $linha['theme'];
+         $text = $linha['text'];
+         $id_user = $linha['id_user'];
+
+         $sql = "SELECT * FROM `users` WHERE `id_user` = $id_user";
+         $consulta = $conn->query($sql);
+         $linha = $consulta->fetch(PDO::FETCH_ASSOC);
+         $username = $linha['username'];
+
         include '../components/main-post.php';
 
         
@@ -102,7 +123,7 @@ class QuestionDAO
             if ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
                 session_start();
                 include_once("../model/question.php");
-                $question = new Question($linha["id_question"], $linha["title"], $linha["theme"], $linha["text"]);
+                $question = new Question($linha["id_question"], $linha["title"], $linha["theme"], $linha['id_user'], $linha["text"]);
                 $_SESSION["obj_question"] = $question;
                 header("location:../view/pages/edit-post.php");
             }
@@ -111,14 +132,14 @@ class QuestionDAO
         }
     }
     
-    function saveEdit($id, $title, $theme, $text, $conn)
+    function saveEdit($id_question, $title, $theme, $id_user, $text, $conn)
     {
         try {
-            $edit = $conn->query("UPDATE `questions` SET `title`='$title',`theme`='$theme',`text`='$text' WHERE id_question = $id");
+            $edit = $conn->query("UPDATE `questions` SET `title`='$title',`theme`='$theme',`text`='$text' WHERE id_question = $id_question");
             $edit->execute();
             echo "<script>
             alert('Post alterado com sucesso');
-            window.location='../view/pages/posts.php?id=".$id."';
+            window.location='../view/pages/posts.php?id=".$id_question."';
             </script>";
         } catch (PDOException $e) {
             echo "Erro ao atualizar: " . $e->getMessage();

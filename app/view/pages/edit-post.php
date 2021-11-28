@@ -1,6 +1,6 @@
 <?php   
 include_once("../../model/question.php");
-session_start(); ?>
+ ?>
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/forum.css">
 </head>
@@ -13,8 +13,8 @@ session_start(); ?>
     <?php
   
  
-    
-    $id = $_SESSION["obj_question"]->getId();
+    $id_user = $_SESSION["obj_question"]->getIdUser();
+    $id_question = $_SESSION["obj_question"]->getIdQuestion();
     $title = $_SESSION["obj_question"]->getTitle();
     $theme = $_SESSION["obj_question"]->getTheme();
     $text = $_SESSION["obj_question"]->getText();
@@ -23,6 +23,7 @@ session_start(); ?>
      <div class="container ">
         <div class="jumbotron container-fluid m-3">
             <h1 class="swFont"> Editando seu post</h1>
+            <?php include  '../components/userModal.php' ?>
         </div> 
 
 
@@ -35,7 +36,8 @@ session_start(); ?>
                         </div>
                     </label>
                     <input id="title" name="title" type="text" class="form-control" placeholder="Exemplo: Como surgiu o nome han solo?" value="<?php echo $title?>" >
-                    <input id="id" name="id" type="number" class="d-none" hidden  value="<?php echo $id ?>" >
+                    <input id="id_question" name="id_question" type="number" class="d-none" hidden  required value="<?php echo $id_question ?>" >
+                    <input id="id_user" name="id_user" type="number" class="d-none" hidden required value="<?php echo $id_user ?>" >
                     <div class="invalid-feedback"> </div>
                 </div>
                 <div class="form-group my-2">

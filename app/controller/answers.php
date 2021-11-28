@@ -17,11 +17,12 @@ $conn = $conexao->connect();
 $answers = new AnswerDAO();
 
 if (isset($_POST["create"])) {
-  $answers->insert($_POST["id_question"], $_POST["text"], $conn);
+  $answers->insert($_POST["id_question"], $_POST['id_user'],$_POST["text"], $conn);
 }
 
 if ($isPosts) {
-  $answers->showByQuestion($_GET['id'], $conn);
+ 
+  $answers->showByQuestion($_GET['id'],  $conn);
 }
 
 if (isset($_POST["delete"])) {

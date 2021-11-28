@@ -1,23 +1,30 @@
 <?php
 class Question
 {
-    private $id;
+    private $id_question;
     private $title;
     private $theme;
+    private $id_user;
     private $text;
 
 
-    function __construct($id, $title, $theme, $text)
+    function __construct($id_question, $title, $theme, $id_user, $text)
     {
-        $this->id = $id;
+        $this->id_question = $id_question;
         $this->title = $title;
         $this->theme = $theme;
+        $this->id_user = $id_user;
         $this->text = $text;
     }
 
-    public function getId()
+    public function getIdUser()
     {
-        return $this->id;
+        return $this->id_user;
+    }
+
+    public function getIdQuestion()
+    {
+        return $this->id_question;
     }
 
     public function getTitle()

@@ -1,6 +1,7 @@
 <?php
 include_once("../../model/answer.php");
-session_start(); ?>
+
+//session_start(); ?>
 
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/forum.css">
@@ -20,6 +21,7 @@ session_start(); ?>
     <div class="container ">
         <div class="jumbotron container-fluid m-3">
             <h1 class="swFont"> Editando sua resposta</h1>
+            <?php include  '../components/userModal.php' ?>
         </div>
 
 
