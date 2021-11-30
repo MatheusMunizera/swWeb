@@ -151,6 +151,7 @@ body{
 .card-text{
     padding: 5%;
     color: #FFFFFF;
+
 }
 .card-text-data{
     color: #FFFFFF;
@@ -216,12 +217,17 @@ body{
 .btn-search{
     color: #ffc500;
 }
+.swSeg{
+    background: #151515;
+}
 
 /* Media query */
 
 @media screen and (min-width:768px) {
     .bg-desk{
-        background-color: #707070;
+        background:#151515;
+        border: 1px solid #ffc500;
+        border-left: none;
     }
     .img-desk{
         width: 1020px;

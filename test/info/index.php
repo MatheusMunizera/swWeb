@@ -107,15 +107,29 @@
 
     <!-- Page content -->
 
+    <?php 
+    
+        $type = $_GET['type'];
+        $id = $_GET['id'];
+        $url = 'https://Matheusmunizera.github.io/swAPI/api/'.$type.'/'.$id.'.json';
+
+
+
+
+        $body = file_get_contents($url);
+        $item = json_decode($body);
+    
+    ?> 
+
     <div class="card" style="">
         <div class="row g-0">
         <div class="col-md-6 text-center">
-            <img src="image/databank_ackbar_01_169_55137220.png" class="img-fluid img-desk" alt="...">
+            <img src="<?php echo $item->image?>" class="img-fluid img-desk" alt="cringe">
         </div>
         <div class="col-md-6 bg-desk">
             <div class="card-body">
-            <h5 class="card-title">Ackbar</h5>
-            <p class="card-text ">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sad. At vero eos et...</p>
+            <h5 class="card-title swFont"><?php echo $item->name?></h5>
+            <p class="card-text swText pt-0"><?php echo $item->resume?></p>
             </div>
         </div>
         </div>
@@ -128,29 +142,21 @@
         <button class="btn btn-secondary title swSeg seg" type="button" data-bs-toggle="collapse" data-bs-target="#Prod" aria-expanded="false" aria-controls="Prod"><a>Produção</a></button>
         <button class="btn btn-secondary title swSeg seg" type="button" data-bs-toggle="collapse" data-bs-target="#Ideol" aria-expanded="false" aria-controls="Ideol"><a>Ideológico</a></button>
       </p>
-      <div class="row">
-        <div class="col">
-          <div class="collapse multi-collapse" id="tecnico">
-            <div class="card card-body swText">
-              Informações Técnicas sobre o individuo, planeta ou veiculo.
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="collapse multi-collapse" id="Prod">
-            <div class="card card-body swText">
-                Informações Produção sobre o individuo, planeta ou veiculo.
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="collapse multi-collapse" id="Ideol">
-              <div class="card card-body swText">
-                  Informações Ideológicas sobre o individuo, planeta ou veiculo.
-              </div>
-            </div>
-          </div>
-      </div>
+      
+      <?php if($type=="characters"){ require "./characters.php";}?>
+      <?php if($type=="species"){ require "./species.php";}?>
+      <?php if($type=="planets"){ require "./planets.php";}?>
+      <?php if($type=="vehicles"){ require "./vehicles.php";}?>
+      <?php if($type=="films"){ require "./films.php";}?>
+      <?php if($type=="series"){ require "./series.php";}?>
+      
+      
+      
+      
+
+
+      
+      
 </div>
 </div>
 
