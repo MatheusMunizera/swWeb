@@ -12,7 +12,7 @@ class UserDAO
              ));
             echo "<script>
             alert('Sucesso ao registrar =D');
-            window.location='../view/pages/home.php';
+            window.location='../view/pages/index.php';
             </script>";
         } catch (PDOException $e) {
             echo "Erro ao registrar" . $e->getMessage();
@@ -33,12 +33,12 @@ class UserDAO
                     $user = new User($linha["id_user"], $linha["username"], $linha["email"], $linha["password"]);
                     $_SESSION["obj_user"] = $user;
     
-                    header("location:../view/pages/home.php");
+                    header("location:../view/pages/index.php");
                 }
             }else{
                 echo "<script>
                 alert('Usuario ou senha incorretos');
-                window.location='../view/pages/home.php';
+                window.location='../view/pages/index.php';
                 </script>";
             }
            
@@ -61,7 +61,7 @@ class UserDAO
             }
             session_start();
             session_destroy();
-            header("location:../view/pages/home.php");
+            header("location:../view/pages/index.php");
            
         } catch (PDOException $e) {
             echo "Erro ao logar: " . $e->getMessage();
@@ -76,7 +76,7 @@ class UserDAO
             $edit->execute();
             echo "<script>
             alert('Seu usuario foi alterado');
-            window.location='../view/pages/home.php';
+            window.location='../view/pages/index.php';
             </script>";
         } catch (PDOException $e) {
             echo "Erro ao atualizar seu usuário: " . $e->getMessage();
