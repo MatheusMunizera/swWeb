@@ -29,21 +29,17 @@
 
     <main role="main">
         <section class="row d-lg-none">
-            <?php require "../components/mobileTypesbar.php" ?>
+            <?php require "../components/mobileTypesbar.php" ?> 
         </section>
-
-        <section class="row d-none d-lg-block ">
-            <?php require "../components/typesbar.php" ?>
+        <section class="row d-none d-lg-block">
+            <?php require "../components/typesbar.php" ?>            
         </section>
 
         <!-- bank -->
-        <section class="text-center">
-           <a href="../pages/info.php">
-
-           
-        <?php require "../components/bankItem.php" ?>
-        </a>
-        </section>
+        <section class="my-3"></section>
+            <?php require "../components/bankItem.php" ?>            
+        </section>         
+        </li>
     </main>
 
     <?php require "../components/footer.php" ?>

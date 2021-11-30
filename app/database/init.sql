@@ -1,3 +1,5 @@
+create database swweb
+
 create table questions (
     id_question int AUTO_INCREMENT,
     title varchar(200) not null,

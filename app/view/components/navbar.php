@@ -35,10 +35,18 @@
 
         </a>
 
-        <a class="btn mx-0 px-2 d-md-none" data-bs-toggle="collapse" href="#search" role="button" aria-expanded="false" aria-controls="search">
+        <?php 
+        $isForum = str_contains($_SERVER['REQUEST_URI'], 'forum');
+        $isDatabank = str_contains($_SERVER['REQUEST_URI'], 'databank');
+        
+        if($isForum || $isDatabank) {?>
+            <a class="btn mx-0 px-2 d-md-none" data-bs-toggle="collapse" href="#search" role="button" aria-expanded="false" aria-controls="search">
             <i class="bi bi-search icon-grey" style="font-size: 25px;"></i>
-
         </a>
+      <?php  } ?>
+        
+        
+       
 
         <a class="btn mx-0 px-2 d-none d-md-flex" href="about.php">
             <i class="bi bi-info-circle-fill icon-grey"></i>
@@ -89,7 +97,7 @@
                 <a class="nav-link text-reset" href="../pages/quiz.php">Quiz</a>
             </li>
             <li class="nav-item  ">
-                <a class="nav-link  text-reset" href="../pages/databank.php">Databank</a>
+                <a class="nav-link  text-reset" href="../pages/databank.php?type=geral">Databank</a>
             </li>
             <li class="nav-item  ">
                 <a class="nav-link active text-reset" href="../pages/forum.php">Forum</a>
@@ -124,7 +132,7 @@
                     <a class="nav-link-sm nav-link swTitle fs-2" href="../pages/quiz.php">Quiz</a>
                 </li>
                 <li class="nav-item  ">
-                    <a class="nav-link-sm nav-link  swTitle fs-2" href="../pages/databank.php">Databank</a>
+                    <a class="nav-link-sm nav-link  swTitle fs-2" href="../pages/databank.php?type=geral">Databank</a>
                 </li>
                 <li class="nav-item  ">
                     <a class="nav-link-sm nav-link  swTitle fs-2" href="../pages/forum.php">Forum</a>
