@@ -29,7 +29,7 @@
 
         </div>
 
-        <a href="home.php" class="navbar-brand flex-grow-1 swFont" id="home">
+        <a href="index.php" class="navbar-brand flex-grow-1 swFont" id="home">
 
             <h1>swweb</h1>
 
@@ -90,7 +90,7 @@
         <ul class="nav swTitle  bar  m-0 p-0 justify-content-center text-uppercase">
 
             <li class="nav-item   ">
-                <a class="nav-link  text-reset" href="../pages/home.php">Home</a>
+                <a class="nav-link  text-reset" href="../pages/index.php">Home</a>
             </li>
             <li class="nav-item  ">
                 <a class="nav-link text-reset" href="../pages/quiz.php">Quiz</a>
@@ -125,7 +125,7 @@
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item   ">
-                    <a class="nav-link-sm nav-link active-sm swTitle fs-2" href="../pages/home.php">Home</a>
+                    <a class="nav-link-sm nav-link active-sm swTitle fs-2" href="../pages/index.php">Home</a>
                 </li>
                 <li class="nav-item  ">
                     <a class="nav-link-sm nav-link swTitle fs-2" href="../pages/quiz.php">Quiz</a>
