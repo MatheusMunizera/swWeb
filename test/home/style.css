@@ -1,10 +1,47 @@
 body{
-    background-color: #151515;
+    background-image: url("../home/assets/img/bgStarws.webp");;
+}
+
+@font-face {
+    font-family: title;
+    src: url(../databank/assets/fonts/Sw\ -\ Restore\ W00\ Black.ttf);
+}
+
+@font-face{
+    font-family: text;
+    src: url(../databank/assets/fonts/Text\ -\ DIN\ Next\ LT\ Arabic\ Regular.ttf);
 }
 
 a{
     text-decoration: none;
 }
+
+h4{
+    text-align: center;
+    font-size: 1.2em;
+    font-family: title;
+}
+
+
+@media (min-width: 991.98px){ 
+    h4{
+        text-align: center;
+        font-size: 3em;
+        font-family: title;
+    }
+
+    .card{
+        font-size: 2em;
+    }
+
+    .card-group{
+        width: 80%;
+        text-align: center;
+        transform: translateX(12%);
+    }
+ }
+
+
 
 #carouselExampleSlidesOnly>img{
     margin-top: -10%;
@@ -58,6 +95,39 @@ a{
 
 /*Slider*/
 
+.slide{
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 991.98px){ 
+    .slide{
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ }
+
+
+.carousel-control-next{
+    opacity: 5;
+    transform: translateX(100%);
+}
+
+.carousel-control-prev{
+    opacity: 5;
+    transform: translateX(-100%);
+}
+
+.carousel-control-next-icon{
+    width: 4rem;
+    height: 4rem;
+}
+.carousel-control-prev-icon{
+    width: 4rem;
+    height: 4rem;
+}
 .container-fluid{
     padding: 0;
 }
@@ -117,9 +187,12 @@ a{
 
 p{
     color: #FFF;
+    font-size: 1.2em;
+    font-family: text;
 }
 
 /* card */
+
 
 .card-body {
     text-align: center;
