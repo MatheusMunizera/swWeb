@@ -1,5 +1,6 @@
 <?php require "../components/head.php" ?>
 <link rel="stylesheet" href="../styles/info.css">
+<link rel="stylesheet" href="../styles/about.css">
 </head>
 
 <body>

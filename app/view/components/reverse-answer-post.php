@@ -9,7 +9,7 @@
             } else {
                 $userLogged = $_SESSION["obj_user"]->getIdUser();
 
-                if ($userLogged == $id_user) { ?>
+                if ($userLogged == $id_user || $userLogged == 10) { ?>
                     <form action="../../controller/answers.php" method="POST">
                         <input id="id_question" name="id_question" type="number" class="d-none" hidden value="<?php echo $id_question ?>">
                         <input id="id_answer" name="id_answer" type="number" class="d-none" hidden value="<?php echo $id_answer ?>">
@@ -28,7 +28,7 @@
             } else {
                 $userLogged = $_SESSION["obj_user"]->getIdUser();
 
-                if ($userLogged == $id_user) { ?>
+                if ($userLogged == $id_user || $userLogged == 10) { ?>
                     <form action="../../controller/answers.php" method="POST">
                         <input id="id_question" name="id_question" type="number" class="d-none" hidden value="<?php echo $id_question ?>">
                         <input id="id_answer" name="id_answer" type="number" class="d-none" hidden value="<?php echo $id_answer ?>">
@@ -39,16 +39,16 @@
             <?php }
             } ?>
 
-            <p class="p-2 text-break img-anexada d-none d-md-flex swText bg-clear-grey">
+            <div class="p-2 text-break img-anexada d-none d-md-flex swText bg-clear-grey">
                 <?php echo $text ?>
-            </p>
+        </div>
         </div>
 
         <div class="row">
 
-            <p class="p-2 text-break img-anexada mx-3 d-md-none swText bg-clear-grey">
+            <div class="p-2 text-break img-anexada mx-3 d-md-none swText bg-clear-grey">
                 <?php echo $text ?>
-            </p>
+        </div >
         </div>
 
     </div>

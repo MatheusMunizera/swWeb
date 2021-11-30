@@ -1,6 +1,6 @@
-<section class="container ">
+<div class="container ">
     <div class="row m-2 flex-row-reverse pb-5 mb-5 ">
-        <section class="col-4 p-0 col-sm-2 align-self-start text-center ">
+        <div class="col-4 p-0 col-sm-2 align-self-start text-center ">
             <i class="bi bi-person-circle" style="font-size: 50px; color:#ffc500;"></i>
             <h6 class="swText p-0 text-center text-break text-capitalize"> <?php echo $username ?></h6>
             <?php
@@ -9,7 +9,7 @@
             } else {
                 $userLogged = $_SESSION["obj_user"]->getIdUser();
 
-                if ($userLogged == $id_user) { ?>
+                if ($userLogged == $id_user || $userLogged == 10) { ?>
                     <form action="../../controller/answers.php" method="POST">
                         <input id="id_question" name="id_question" type="number" class="d-none" hidden value="<?php echo $id_question ?>">
                         <input id="id_answer" name="id_answer" type="number" class="d-none" hidden value="<?php echo $id_answer ?>">
@@ -22,15 +22,15 @@
             } ?>
 
 
-        </section>
-        <article class="col  p-0 align-self-center text-end my-3">
+        </div>
+        <div class="col  p-0 align-self-center text-end my-3">
             <?php
             if (empty($_SESSION['obj_user']) == 1) {
                 $userLogged = "";
             } else {
                 $userLogged = $_SESSION["obj_user"]->getIdUser();
 
-                if ($userLogged == $id_user) { ?>
+                if ($userLogged == $id_user || $userLogged == 10) { ?>
                     <form action="../../controller/answers.php" method="POST">
                         <input id="id_question" name="id_question" type="number" class="d-none" hidden value="<?php echo $id_question ?>">
                         <input id="id_answer" name="id_answer" type="number" class="d-none" hidden value="<?php echo $id_answer ?>">
@@ -45,19 +45,19 @@
             } ?>
 
 
-            <p class="p-2 text-break img-anexada d-none d-md-flex swText bg-clear-grey">
+            <div class="p-2 text-break img-anexada d-none d-md-flex swText bg-clear-grey">
                 <?php echo $text ?>
-            </p>
-        </article>
+        </div>
+        </div>
 
-        <article class="row">
+        <div class="row">
 
-            <p class="p-2 text-break img-anexada d-md-none m-0 swText bg-clear-grey">
+            <div class="p-2 text-break img-anexada d-md-none m-0 swText bg-clear-grey">
                 <?php echo $text ?>
-            </p>
+        </div>
 
 
-        </article>
+        </div>
 
     </div>
-</section>
+</div>

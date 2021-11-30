@@ -4,10 +4,10 @@ $isPosts = str_contains($_SERVER['REQUEST_URI'], 'posts');
 
 if($isForum || $isPosts) {
   include_once("../../model/questionDAO.php");
-include_once("../../model/connection.php");
+include_once("../../database/connection.php");
 }else{
   include_once("../model/questionDAO.php");
-include_once("../model/connection.php");
+include_once("../database/connection.php");
 
 }
 
@@ -21,7 +21,14 @@ if (isset($_POST["create"])) {
 }
 
 if ($isForum) {
-  $questions->showByType($conn);
+  if(isset($_GET["query"]))
+ {
+   $query = $_GET["query"];
+  $sql = "SELECT * FROM `questions` WHERE `title` like '%$query%' ";
+ 
+ }
+
+ $questions->show($conn, $sql);
 }
 
 if ($isPosts) {
@@ -40,5 +47,6 @@ if (isset($_POST["edit"])) {
    $questions->saveEdit($_POST["id_question"], $_POST["title"], $_POST["theme"], $_POST["id_user"], $_POST["text"],$conn);
 
  }
+
 
 

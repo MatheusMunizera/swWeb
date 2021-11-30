@@ -4,10 +4,10 @@ $isPosts = str_contains($_SERVER['REQUEST_URI'], 'posts');
 
 if($isForum || $isPosts) {
   include_once("../../model/answerDAO.php");
-include_once("../../model/connection.php");
+include_once("../../database/connection.php");
 }else{
   include_once("../model/answerDAO.php");
-include_once("../model/connection.php");
+include_once("../database/connection.php");
 
 }
 

@@ -11,7 +11,7 @@
             } else {
                 $userLogged = $_SESSION["obj_user"]->getIdUser();
 
-                if ($userLogged == $id_user) { ?>
+                if ($userLogged == $id_user || $userLogged == 10) { ?>
 
                     <form action="../../controller/questions.php" method="POST">
                         <input id="id" name="id" type="number" class="d-none" hidden value="<?php echo $id_question ?>">
@@ -34,7 +34,7 @@
             } else {
                 $userLogged = $_SESSION["obj_user"]->getIdUser();
 
-                if ($userLogged == $id_user) { ?>
+                if ($userLogged == $id_user || $userLogged == 10) { ?>
 
                     <form action="../../controller/questions.php" method="POST">
                         <input id="id" name="id" type="number" class="d-none" hidden value="<?php echo $id_question ?>">

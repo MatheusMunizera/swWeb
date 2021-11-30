@@ -75,7 +75,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="validationRegisterEmail" class="form-label  swFont">Password</label>
+                            <label for="validationRegisterEmail" class="form-label  swFont">Email</label>
                             <div class="input-group has-validation">
                                 <input type="email" class="form-control" id="validationRegisterEmail" style="border: 1px solid #ffc500;" name="email" required>
                                 <div class="invalid-feedback">

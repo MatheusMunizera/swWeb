@@ -37,9 +37,8 @@
 
         <?php 
         $isForum = str_contains($_SERVER['REQUEST_URI'], 'forum');
-        $isDatabank = str_contains($_SERVER['REQUEST_URI'], 'databank');
-        
-        if($isForum || $isDatabank) {?>
+      
+        if($isForum ) {?>
             <a class="btn mx-0 px-2 d-md-none" data-bs-toggle="collapse" href="#search" role="button" aria-expanded="false" aria-controls="search">
             <i class="bi bi-search icon-grey" style="font-size: 25px;"></i>
         </a>

@@ -18,50 +18,52 @@ class QuestionDAO
             echo "Erro ao inserir" . $e->getMessage();
         }
     }
-
-    function showByType($conn)
+   
+    function show($conn, $sql)
     {
-       
+       if(empty($sql)){
         $sql = "SELECT * FROM `questions`  order by `id_question` DESC"; 
 
-         if (!empty($_GET['theme']) ) {
-             $type = $_GET['theme'];   
-             $sql = "SELECT * FROM `questions`  WHERE theme = '$type' order by `id_question` DESC"; 
-         } 
-
-        $consulta = $conn->query($sql);
-
-        $registros=$consulta->rowCount();
-         
-        function findUsernameByID($id_user, $conn){
+        if (!empty($_GET['theme']) ) {
+            $type = $_GET['theme'];   
+            $sql = "SELECT * FROM `questions`  WHERE theme = '$type' order by `id_question` DESC"; 
+        }   
+       }
        
-            $sql = "SELECT * FROM `users` WHERE `id_user` = $id_user";
-            $consulta = $conn->query($sql);
-            $linha = $consulta->fetch(PDO::FETCH_ASSOC);
-            $username = $linha['username'];
-            return $username;
-        }
 
-        if($registros){
-         while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-            $id_question = $linha['id_question'];
-            $title = $linha['title'];
-            $theme = $linha['theme'];
-            $text = $linha['text'];
-            $id_user = $linha['id_user'];
-            $username = findUsernameByID( $id_user, $conn);
-            include '../components/previewposts.php';
+      $consulta = $conn->query($sql);
 
-         }
+      $registros=$consulta->rowCount();
        
-      }else{
-          echo "
-            <section class='container text-center'> 
-          <h1 class='swFont'>Não há registros!</h1>
-          </section>
-          ";
-          
+      function findUsernameByID($id_user, $conn){
+     
+          $sql = "SELECT * FROM `users` WHERE `id_user` = $id_user";
+          $consulta = $conn->query($sql);
+          $linha = $consulta->fetch(PDO::FETCH_ASSOC);
+          $username = $linha['username'];
+          return $username;
       }
+
+      if($registros){
+       while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+          $id_question = $linha['id_question'];
+          $title = $linha['title'];
+          $theme = $linha['theme'];
+          $text = $linha['text'];
+          $id_user = $linha['id_user'];
+          $username = findUsernameByID( $id_user, $conn);
+          include '../components/previewposts.php';
+
+       }
+     
+    }else{
+        echo "
+          <section class='container text-center'> 
+        <h1 class='swFont'>Não há registros!</h1>
+        </section>
+        ";
+        
+    }
 
 
     }
@@ -145,6 +147,8 @@ class QuestionDAO
             echo "Erro ao atualizar: " . $e->getMessage();
         }
     }
+
+    
 
 }
 ?>

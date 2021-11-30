@@ -10,13 +10,13 @@
 
                 <!-- SEARCHBOX -->
 
-                <div class=" collapse d-md-none text-center" id="search">
+                <!-- <div class=" collapse d-md-none text-center" id="search">
                     <?php include  '../components/searchbox.php' ?>
                 </div>
 
                 <div class="text-center d-none d-md-block">
                     <?php include  '../components/searchbox.php' ?>
-                </div>
+                </div> -->
 
                 <h1 class="d-md-none swFont flex-grow-1 text-center my-1 display-5">QUIZ</h1>
 

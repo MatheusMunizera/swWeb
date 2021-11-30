@@ -16,13 +16,13 @@
 
                 <!-- SEARCHBOX -->
 
-                <div class=" collapse d-md-none text-center" id="search">
+                <!-- <div class=" collapse d-md-none text-center" id="search">
                     <?php include  '../components/searchbox.php' ?>
                 </div>
 
                 <div class="text-center d-none d-md-block">
                     <?php include  '../components/searchbox.php' ?>
-                </div>
+                </div> -->
 
                 <?php include  '../components/userModal.php' ?>
             </section>
